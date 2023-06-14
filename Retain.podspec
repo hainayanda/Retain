@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-  Retain is object lifecylce helper that provide a simple way to control object retaining and observe it
+  Retain is an object lifecycle helper that provides a simple way to control object retaining and observing it
                        DESC
 
   s.homepage         = 'https://github.com/hainayanda/Retain'

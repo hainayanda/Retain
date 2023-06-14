@@ -1,6 +1,6 @@
 # Retain
 
-Retain is object lifecylce helper that provide a simple way to control object retaining and observe it
+Retain is an object lifecycle helper that provides a simple way to control object retaining and observing it
 
 [![CI Status](https://img.shields.io/travis/hainayanda/Retain.svg?style=flat)](https://travis-ci.org/hainayanda/Retain)
 [![Version](https://img.shields.io/cocoapods/v/Retain.svg?style=flat)](https://cocoapods.org/pods/Retain)
@@ -66,30 +66,30 @@ Retain is available under the MIT license. See the LICENSE file for more info.
 
 ## Usage
 
-### Observe object dealocation
+### Observe object deallocation
 
-You can observe object dealocation very easily by using global function `whenDealocate(for:do:)`:
+You can observe object deallocation very easily by using the global function `whenDeallocate(for:do:)`:
 
 ```swift
-let cancellable = whenDealocate(for: myObject) {
-    print("myObject is dealocated")
+let cancellable = whenDeallocate(for: myObject) {
+    print("myObject is deallocated")
 }
 ```
 
-It will produce `Combine` `AnyCancellable` and the closure will be called whenever the object is being dealocated by `ARC`.
+It will produce Combine's `AnyCancellable` and the closure will be called whenever the object is being deallocated by `ARC`.
 
-If you prefer get the underlying publisher instead, use `dealocatePublisher(of:)`:
+If you prefer to get the underlying publisher instead, use `deallocatePublisher(of:)`:
 
 ```swift
-let myObjectDealocationPublisher: AnyPublisher<Void, Never> = dealocatePublisher(of: myObject)
+let myObjectDeallocationPublisher: AnyPublisher<Void, Never> = deallocatePublisher(of: myObject)
 ```
 
-### DealocateObservable
+### DeallocateObservable
 
-there's one protocol named `DealocateObservable` that can exposed the global function as a method so it can be used directly from the object itself:
+there's one protocol named `DeallocateObservable` that can expose the global function as a method so it can be used directly from the object itself:
 
 ```swift
-class MyObject: DealocateObservable { 
+class MyObject: DeallocateObservable { 
     ...
     ...
 }
@@ -99,39 +99,39 @@ so then you can do this to the object:
 
 ```swift
 // get the publisher
-let myObjectDealocationPublisher: AnyPublisher<Void, Never> = myObject.dealocatePublisher
+let myObjectDeallocationPublisher: AnyPublisher<Void, Never> = myObject.deallocatePublisher
 
-// listen to the dealocation
-let cancellable = myObject.whenDealocate {
-    print("myObject is dealocated")
+// listen to the deallocation
+let cancellable = myObject.whenDeallocate {
+    print("myObject is deallocated")
 }
 ```
 
 ### WeakSubject propertyWrapper
 
-There's a propertyWrapper that enable `DealocateObservable` behavior without implementing one named `WeakSubject`:
+There's a propertyWrapper that enables `DeallocateObservable` behavior without implementing one named `WeakSubject`:
 
 ```swift
 @WeakSubject var myObject: MyObject?
 ```
 
-this propertyWrapper will store the object in weak variable and can be observed like `DealocateObservable` by accessing its `projectedValue`:
+this propertyWrapper will store the object in a weak variable and can be observed like `DeallocateObservable` by accessing its `projectedValue`:
 
 ```swift
 // get the publisher
-let dealocationPublisher: AnyPublisher<Void, Never> = $myObject.dealocatePublisher
+let deallocationPublisher: AnyPublisher<Void, Never> = $myObject.deallocatePublisher
 
-// listen to the dealocation
-let cancellable = $myObject.whenDealocate {
-    print("current value in myObject propertyWrapper is dealocated")
+// listen to the deallocation
+let cancellable = $myObject.whenDeallocate {
+    print("current value in myObject propertyWrapper is deallocated")
 }
 ```
 
-It will always emit an event for as many object assigned to this `propertyWrapper` as long the object is dealocated when still in this `propertyWrapper`.
+It will always emit an event for as many objects assigned to this `propertyWrapper` as long the object is deallocated when still in this `propertyWrapper`.
 
 ### RetainableSubject
 
-RetainableSubject is very similar with WeakSubject. The only difference is, we can control wether this propertyWrapper will retain the object strongly or weak:
+RetainableSubject is very similar to WeakSubject. The only difference is, we can control whether this propertyWrapper will retain the object strongly or weak:
 
 ```swift
 @RetainableSubject var myObject: MyObject?
@@ -149,15 +149,15 @@ $myObject.state = .strong
 $myObject.makeStrong()
 ```
 
-Since `RetainableSubject` is `DealocateObservable` too, you can do something similar with `WeakSubject`:
+Since `RetainableSubject` is `DeallocateObservable` too, you can do something similar with `WeakSubject`:
 
 ```swift
 // get the publisher
-let dealocationPublisher: AnyPublisher<Void, Never> = $myObject.dealocatePublisher
+let deallocationPublisher: AnyPublisher<Void, Never> = $myObject.deallocatePublisher
 
-// listen to the dealocation
-let cancellable = $myObject.whenDealocate {
-    print("current value in myObject propertyWrapper is dealocated")
+// listen to the deallocation
+let cancellable = $myObject.whenDeallocate {
+    print("current value in myObject propertyWrapper is deallocated")
 }
 ```
 
