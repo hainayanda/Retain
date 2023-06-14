@@ -111,13 +111,13 @@ let cancellable = myObject.whenDeallocate {
 
 ### WeakSubject propertyWrapper
 
-There's a propertyWrapper that enables `DeallocateObservable` behavior without implementing one named `WeakSubject`:
+There's a `propertyWrapper` that enables `DeallocateObservable` behavior without implementing one named `WeakSubject`:
 
 ```swift
 @WeakSubject var myObject: MyObject?
 ```
 
-this propertyWrapper will store the object in a weak variable and can be observed like `DeallocateObservable` by accessing its `projectedValue`:
+this `propertyWrapper` will store the object in a weak variable and can be observed like `DeallocateObservable` by accessing its `projectedValue`:
 
 ```swift
 // get the publisher
@@ -133,13 +133,13 @@ It will always emit an event for as many objects assigned to this `propertyWrapp
 
 ### RetainableSubject
 
-RetainableSubject is very similar to WeakSubject. The only difference is, we can control whether this propertyWrapper will retain the object strongly or weak:
+`RetainableSubject` is very similar to `WeakSubject`. The only difference is, we can control whether this `propertyWrapper` will retain the object strongly or weak:
 
 ```swift
 @RetainableSubject var myObject: MyObject?
 ```
 
-to change the state of the propertyWrapper retain state, just access the `projectedValue`:
+to change the state of the `propertyWrapper` retain state, just access the `projectedValue`:
 
 ```swift
 // make weak
