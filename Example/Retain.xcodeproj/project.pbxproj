@@ -37,7 +37,7 @@
 		3A33E4E42A2898D400BCBEFF /* Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dummy.swift; sourceTree = "<group>"; };
 		3A33E4E62A289A1D00BCBEFF /* RetainableSubjectSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetainableSubjectSpec.swift; sourceTree = "<group>"; };
 		54124ADDE7E2C78CDAFFB9AB /* Pods-Retain_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Retain_Tests.debug.xcconfig"; path = "Target Support Files/Pods-Retain_Tests/Pods-Retain_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		57E336B4B1FBDCEE38A6F300 /* Retain.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Retain.podspec; path = ../Retain.podspec; sourceTree = "<group>"; };
+		57E336B4B1FBDCEE38A6F300 /* Retain.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Retain.podspec; path = ../Retain.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		607FACD01AFB9204008FA782 /* Retain_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Retain_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
