@@ -1,8 +1,10 @@
 # Retain
 
 Retain is an object lifecycle helper that provides a simple way to control object retaining and observing it
-
-[![CI Status](https://img.shields.io/travis/hainayanda/Retain.svg?style=flat)](https://travis-ci.org/hainayanda/Retain)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/42316a3fbf084bf7bb44869f6c8d827b)](https://app.codacy.com/gh/hainayanda/Retain/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
+![build](https://github.com/hainayanda/Retain/workflows/build/badge.svg)
+![test](https://github.com/hainayanda/Retain/workflows/test/badge.svg)
+[![SwiftPM Compatible](https://img.shields.io/badge/SwiftPM-Compatible-brightgreen)](https://swift.org/package-manager/)
 [![Version](https://img.shields.io/cocoapods/v/Retain.svg?style=flat)](https://cocoapods.org/pods/Retain)
 [![License](https://img.shields.io/cocoapods/l/Retain.svg?style=flat)](https://cocoapods.org/pods/Retain)
 [![Platform](https://img.shields.io/cocoapods/p/Retain.svg?style=flat)](https://cocoapods.org/pods/Retain)
