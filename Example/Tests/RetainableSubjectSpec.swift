@@ -47,12 +47,12 @@ class RetainableSubjectSpec: QuickSpec {
                 
                 expect(subject.wrappedValue).notTo(beNil())
             }
-            it("should published dealocate event") {
+            it("should published deallocate event") {
                 var dummy: Dummy? = Dummy()
                 subject.wrappedValue = dummy
                 
                 var triggered: Bool = false
-                subject.projectedValue.whenDealocate {
+                subject.projectedValue.whenDeallocate {
                     triggered = true
                 }
                 .store(in: &cancellables)
@@ -89,12 +89,12 @@ class RetainableSubjectSpec: QuickSpec {
                 
                 expect(subject.wrappedValue).to(beNil())
             }
-            it("should published dealocate event when change to weak and dealocated") {
+            it("should published deallocate event when change to weak and deallocated") {
                 var dummy: Dummy? = Dummy()
                 subject.wrappedValue = dummy
                 
                 var triggered: Bool = false
-                subject.projectedValue.whenDealocate {
+                subject.projectedValue.whenDeallocate {
                     triggered = true
                 }
                 .store(in: &cancellables)

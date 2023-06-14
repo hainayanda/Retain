@@ -11,7 +11,7 @@ import Combine
 // MARK: WeakSubject
 
 @propertyWrapper
-public final class WeakSubject<Wrapped: AnyObject>: DealocateObservable {
+public final class WeakSubject<Wrapped: AnyObject>: DeallocateObservable {
     
     // MARK: wrappedValue
     
@@ -26,11 +26,11 @@ public final class WeakSubject<Wrapped: AnyObject>: DealocateObservable {
     
     // MARK: Public properties
     
-    public var projectedValue: DealocateObservable {
+    public var projectedValue: DeallocateObservable {
         self
     }
     
-    public var dealocatePublisher: AnyPublisher<Void, Never> { publisher.eraseToAnyPublisher() }
+    public var deallocatePublisher: AnyPublisher<Void, Never> { publisher.eraseToAnyPublisher() }
     
     // MARK: Internal properties
     
@@ -52,7 +52,7 @@ public final class WeakSubject<Wrapped: AnyObject>: DealocateObservable {
     
     // MARK: Public methods
     
-    public func whenDealocate(do operation: @escaping () -> Void) -> AnyCancellable {
+    public func whenDeallocate(do operation: @escaping () -> Void) -> AnyCancellable {
         publisher.sink(receiveValue: operation)
     }
     
@@ -63,7 +63,7 @@ public final class WeakSubject<Wrapped: AnyObject>: DealocateObservable {
             cancellable = nil
             return
         }
-        cancellable = Retain.dealocatePublisher(of: assignedObject)
+        cancellable = Retain.deallocatePublisher(of: assignedObject)
             .sink { [unowned self] in
                 self.publisher.send(())
             }

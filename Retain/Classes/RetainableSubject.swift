@@ -10,7 +10,7 @@ import Combine
 
 // MARK: RetainControllable
 
-public protocol RetainControllable: AnyObject, DealocateObservable {
+public protocol RetainControllable: AnyObject, DeallocateObservable {
     var state: RetainState { get set }
 }
 
@@ -64,7 +64,7 @@ public final class RetainableSubject<Wrapped: AnyObject>: RetainControllable {
     
     public var projectedValue: RetainControllable { self }
     
-    public var dealocatePublisher: AnyPublisher<Void, Never> { $weakWrappedValue.dealocatePublisher }
+    public var deallocatePublisher: AnyPublisher<Void, Never> { $weakWrappedValue.deallocatePublisher }
     
     // MARK: Init
     
@@ -75,7 +75,7 @@ public final class RetainableSubject<Wrapped: AnyObject>: RetainControllable {
     
     // MARK: Public method
     
-    public func whenDealocate(do operation: @escaping () -> Void) -> AnyCancellable {
-        $weakWrappedValue.whenDealocate(do: operation)
+    public func whenDeallocate(do operation: @escaping () -> Void) -> AnyCancellable {
+        $weakWrappedValue.whenDeallocate(do: operation)
     }
 }

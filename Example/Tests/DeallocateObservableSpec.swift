@@ -1,5 +1,5 @@
 //
-//  DealocateObservableSpec.swift
+//  DeallocateObservableSpec.swift
 //  Retain_Tests
 //
 //  Created by Nayanda Haberty on 14/6/23.
@@ -12,23 +12,23 @@ import Nimble
 import Retain
 import Combine
 
-class DealocateObservableSpec: QuickSpec {
+class DeallocateObservableSpec: QuickSpec {
     override class func spec() {
         var cancellables: [AnyCancellable]!
-        var dummy: DummyDealocateObservable?
+        var dummy: DummyDeallocateObservable?
         beforeEach {
             cancellables = []
-            dummy = DummyDealocateObservable()
+            dummy = DummyDeallocateObservable()
         }
-        it("should triggered when object dealocated") {
+        it("should triggered when object deallocated") {
             var triggered1: Bool = false
             var triggered2: Bool = false
             
-            dummy!.whenDealocate {
+            dummy!.whenDeallocate {
                 triggered1 = true
             }
             .store(in: &cancellables)
-            dummy!.whenDealocate {
+            dummy!.whenDeallocate {
                 triggered2 = true
             }
             .store(in: &cancellables)
@@ -41,4 +41,4 @@ class DealocateObservableSpec: QuickSpec {
     }
 }
 
-private class DummyDealocateObservable: DealocateObservable { }
+private class DummyDeallocateObservable: DeallocateObservable { }
