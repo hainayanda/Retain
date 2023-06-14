@@ -52,7 +52,7 @@ class RetainableSubjectSpec: QuickSpec {
                 subject.wrappedValue = dummy
                 
                 var triggered: Bool = false
-                subject.projectedValue.publisher.sink {
+                subject.projectedValue.whenDealocate {
                     triggered = true
                 }
                 .store(in: &cancellables)
@@ -94,7 +94,7 @@ class RetainableSubjectSpec: QuickSpec {
                 subject.wrappedValue = dummy
                 
                 var triggered: Bool = false
-                subject.projectedValue.publisher.sink {
+                subject.projectedValue.whenDealocate {
                     triggered = true
                 }
                 .store(in: &cancellables)

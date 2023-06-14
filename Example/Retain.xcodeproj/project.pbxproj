@@ -11,6 +11,7 @@
 		3A33E4E32A2898AA00BCBEFF /* WeakSubjectSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A33E4E22A2898AA00BCBEFF /* WeakSubjectSpec.swift */; };
 		3A33E4E52A2898D400BCBEFF /* Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A33E4E42A2898D400BCBEFF /* Dummy.swift */; };
 		3A33E4E72A289A1D00BCBEFF /* RetainableSubjectSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A33E4E62A289A1D00BCBEFF /* RetainableSubjectSpec.swift */; };
+		3A7B4EAE2A39C375000DC12C /* DealocateObservableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7B4EAD2A39C375000DC12C /* DealocateObservableSpec.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 		3A33E4E22A2898AA00BCBEFF /* WeakSubjectSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakSubjectSpec.swift; sourceTree = "<group>"; };
 		3A33E4E42A2898D400BCBEFF /* Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dummy.swift; sourceTree = "<group>"; };
 		3A33E4E62A289A1D00BCBEFF /* RetainableSubjectSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetainableSubjectSpec.swift; sourceTree = "<group>"; };
+		3A7B4EAD2A39C375000DC12C /* DealocateObservableSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealocateObservableSpec.swift; sourceTree = "<group>"; };
 		54124ADDE7E2C78CDAFFB9AB /* Pods-Retain_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Retain_Tests.debug.xcconfig"; path = "Target Support Files/Pods-Retain_Tests/Pods-Retain_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		57E336B4B1FBDCEE38A6F300 /* Retain.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Retain.podspec; path = ../Retain.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		607FACD01AFB9204008FA782 /* Retain_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Retain_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				3A33E4E02A28958600BCBEFF /* DealocateFunctionSpec.swift */,
+				3A7B4EAD2A39C375000DC12C /* DealocateObservableSpec.swift */,
 				3A33E4E42A2898D400BCBEFF /* Dummy.swift */,
 				3A33E4E62A289A1D00BCBEFF /* RetainableSubjectSpec.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
@@ -372,6 +375,7 @@
 			files = (
 				3A33E4E72A289A1D00BCBEFF /* RetainableSubjectSpec.swift in Sources */,
 				3A33E4E12A28958600BCBEFF /* DealocateFunctionSpec.swift in Sources */,
+				3A7B4EAE2A39C375000DC12C /* DealocateObservableSpec.swift in Sources */,
 				3A33E4E52A2898D400BCBEFF /* Dummy.swift in Sources */,
 				3A33E4E32A2898AA00BCBEFF /* WeakSubjectSpec.swift in Sources */,
 			);

@@ -43,6 +43,7 @@
 		3A33E4DB2A28499A00BCBEFF /* DealocateFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A33E4DA2A28499A00BCBEFF /* DealocateFunction.swift */; };
 		3A33E4DD2A284CB000BCBEFF /* WeakSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A33E4DC2A284CB000BCBEFF /* WeakSubject.swift */; };
 		3A33E4DF2A28540500BCBEFF /* RetainableSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A33E4DE2A28540500BCBEFF /* RetainableSubject.swift */; };
+		3A7B4EAC2A39C28F000DC12C /* DealocateObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7B4EAB2A39C28F000DC12C /* DealocateObservable.swift */; };
 		3D91096FC812D66378F048B84449CEF6 /* QCKConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB414D92B54F3A1FB88F31DCBFE6E7D /* QCKConfiguration.swift */; };
 		45D83BC18E4E0C0511EE045DF6049602 /* Polling+AsyncAwait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EE00BA39621A90549849C5BDDC7BA2 /* Polling+AsyncAwait.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		47AF00D4980301CB0282899CF1528076 /* Quick.h in Headers */ = {isa = PBXBuildFile; fileRef = AAFD7194EBF59DAF3033EF9D2DEE568A /* Quick.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -216,6 +217,7 @@
 		3A33E4DA2A28499A00BCBEFF /* DealocateFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealocateFunction.swift; sourceTree = "<group>"; };
 		3A33E4DC2A284CB000BCBEFF /* WeakSubject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakSubject.swift; sourceTree = "<group>"; };
 		3A33E4DE2A28540500BCBEFF /* RetainableSubject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetainableSubject.swift; sourceTree = "<group>"; };
+		3A7B4EAB2A39C28F000DC12C /* DealocateObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealocateObservable.swift; sourceTree = "<group>"; };
 		3B2737FDBAAA3FA3F349C0D203E3C438 /* SuiteHooks.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SuiteHooks.swift; path = Sources/Quick/Hooks/SuiteHooks.swift; sourceTree = "<group>"; };
 		3B98D891C2632E4F35695D6ADD8C2D26 /* Quick-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Quick-dummy.m"; sourceTree = "<group>"; };
 		3D90E12DB48E8D37CE93FE0BD5F1E560 /* CwlCatchException.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CwlCatchException.m; path = Carthage/Checkouts/CwlCatchException/Sources/CwlCatchExceptionSupport/CwlCatchException.m; sourceTree = "<group>"; };
@@ -475,6 +477,7 @@
 				3A33E4DA2A28499A00BCBEFF /* DealocateFunction.swift */,
 				3A33E4DC2A284CB000BCBEFF /* WeakSubject.swift */,
 				3A33E4DE2A28540500BCBEFF /* RetainableSubject.swift */,
+				3A7B4EAB2A39C28F000DC12C /* DealocateObservable.swift */,
 			);
 			name = Classes;
 			path = Retain/Classes;
@@ -1044,6 +1047,7 @@
 				3A33E4DB2A28499A00BCBEFF /* DealocateFunction.swift in Sources */,
 				3A33E4DF2A28540500BCBEFF /* RetainableSubject.swift in Sources */,
 				9484518F1F6D6954545C428197E99F34 /* Retain-dummy.m in Sources */,
+				3A7B4EAC2A39C28F000DC12C /* DealocateObservable.swift in Sources */,
 				3A33E4DD2A284CB000BCBEFF /* WeakSubject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

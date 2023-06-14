@@ -10,9 +10,8 @@ import Combine
 
 // MARK: RetainControllable
 
-public protocol RetainControllable: AnyObject {
+public protocol RetainControllable: AnyObject, DealocateObservable {
     var state: RetainState { get set }
-    var publisher: AnyPublisher<Void, Never> { get }
 }
 
 extension RetainControllable {
@@ -52,8 +51,6 @@ public final class RetainableSubject<Wrapped: AnyObject>: RetainControllable {
     
     // MARK: Public properties
     
-    public var publisher: AnyPublisher<Void, Never> { $weakWrappedValue }
-    
     public var state: RetainState {
         didSet {
             switch state {
@@ -67,10 +64,18 @@ public final class RetainableSubject<Wrapped: AnyObject>: RetainControllable {
     
     public var projectedValue: RetainControllable { self }
     
+    public var dealocatePublisher: AnyPublisher<Void, Never> { $weakWrappedValue.dealocatePublisher }
+    
     // MARK: Init
     
     public init(wrappedValue: Wrapped? = nil, state: RetainState = .strong) {
         self.state = state
         self.wrappedValue = wrappedValue
+    }
+    
+    // MARK: Public method
+    
+    public func whenDealocate(do operation: @escaping () -> Void) -> AnyCancellable {
+        $weakWrappedValue.whenDealocate(do: operation)
     }
 }

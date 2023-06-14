@@ -36,7 +36,7 @@ class WeakSubjectSpec: QuickSpec {
             subject.wrappedValue = dummy
             
             var triggered: Bool = false
-            subject.projectedValue.sink {
+            subject.projectedValue.whenDealocate {
                 triggered = true
             }
             .store(in: &cancellables)
