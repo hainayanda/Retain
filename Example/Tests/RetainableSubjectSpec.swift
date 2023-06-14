@@ -13,6 +13,7 @@ import Retain
 import Combine
 
 class RetainableSubjectSpec: QuickSpec {
+    // swiftlint:disable function_body_length
     override class func spec() {
         var cancellables: [AnyCancellable]!
         var subject: RetainableSubject<Dummy>!
