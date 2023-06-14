@@ -8,14 +8,11 @@
 import Foundation
 import Combine
 
+// MARK: RetainControllable
+
 public protocol RetainControllable: AnyObject {
     var state: RetainState { get set }
     var publisher: AnyPublisher<Void, Never> { get }
-}
-
-public enum RetainState {
-    case strong
-    case `weak`
 }
 
 extension RetainControllable {
@@ -28,10 +25,19 @@ extension RetainControllable {
     }
 }
 
+// MARK: RetainState
+
+public enum RetainState {
+    case strong
+    case `weak`
+}
+
+// MARK: RetainableSubject
+
 @propertyWrapper
 public final class RetainableSubject<Wrapped: AnyObject>: RetainControllable {
     
-    public var publisher: AnyPublisher<Void, Never> { $weakWrappedValue }
+    // MARK: wrappedValue
     
     @WeakSubject private var weakWrappedValue: Wrapped?
     private var strongWrappedValue: Wrapped?
@@ -44,6 +50,10 @@ public final class RetainableSubject<Wrapped: AnyObject>: RetainControllable {
         }
     }
     
+    // MARK: Public properties
+    
+    public var publisher: AnyPublisher<Void, Never> { $weakWrappedValue }
+    
     public var state: RetainState {
         didSet {
             switch state {
@@ -55,10 +65,12 @@ public final class RetainableSubject<Wrapped: AnyObject>: RetainControllable {
         }
     }
     
+    public var projectedValue: RetainControllable { self }
+    
+    // MARK: Init
+    
     public init(wrappedValue: Wrapped? = nil, state: RetainState = .strong) {
         self.state = state
         self.wrappedValue = wrappedValue
     }
-    
-    public var projectedValue: RetainControllable { self }
 }
