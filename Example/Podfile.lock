@@ -1,7 +1,7 @@
 PODS:
   - Nimble (12.0.0)
   - Quick (7.0.0)
-  - Retain (0.1.0)
+  - Retain (1.0.0)
 
 DEPENDENCIES:
   - Nimble (~> 12.0.0)
@@ -20,7 +20,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Nimble: 02a4990866e51868303a466970cd1c81bb84a192
   Quick: f57e9c1acc5ff48d2b04e23a17b4892eda5a3b09
-  Retain: e17a10c0fb6088c11a5261e9047427a1be29cec2
+  Retain: adcf79f495e8d5e9a6bddd942f5833e362198c73
 
 PODFILE CHECKSUM: 970fac7b673d060cc9d4deffc3ee9a55006ef9a8
 
