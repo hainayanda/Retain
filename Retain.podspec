@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Retain'
-  s.version          = '1.0.1'
+  s.version          = '1.0.2'
   s.summary          = 'Object lifecycle helper'
 
 # This description is used to generate tags and improve search results.
