@@ -110,4 +110,5 @@ class RetainableSubjectSpec: QuickSpec {
             }
         }
     }
+    // swiftlint:enable function_body_length
 }
